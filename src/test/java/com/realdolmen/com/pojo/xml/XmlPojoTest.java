@@ -22,7 +22,7 @@ public class XmlPojoTest {
 
     @org.junit.Test
     public void testToXml() throws Exception {
-        XmlPojo pojo = new XmlPojo();
+        XmlPojoConvertor pojo = new XmlPojoConvertor();
         StringWriter xml = pojo.toXml(someObject, SomeObject.class);
         System.out.println( xml );
         assertNotNull( xml );
@@ -30,7 +30,7 @@ public class XmlPojoTest {
 
     @org.junit.Test
     public void testToPojo() throws Exception {
-        XmlPojo pojo = new XmlPojo();
+        XmlPojoConvertor pojo = new XmlPojoConvertor();
         SomeObject someObjectFromXml = (SomeObject) pojo.toPojo( XML_OF_SOMEOBJECT, SomeObject.class);
         assertEquals("Id must be 1", 1, someObjectFromXml.getId());
         assertEquals("Name must be De Man", "De Man", someObjectFromXml.getName());
