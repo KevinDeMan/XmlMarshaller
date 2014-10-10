@@ -11,7 +11,7 @@ import java.io.StringWriter;
 /**
  * Created by KDAAU95 on 10/10/2014.
  */
-public class XmlPojoConvertor<T extends SomeObject> {
+public class XmlPojoConvertor<T extends Object> {
 
     public StringWriter toXml(T object, Class javaClass) throws Exception {
         StringWriter writer = new StringWriter();
